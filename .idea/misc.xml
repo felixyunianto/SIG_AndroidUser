@@ -8,8 +8,9 @@
         <entry key="app/src/main/res/drawable/shadow_top.xml" value="0.2824074074074074" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_contact_us.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16467065868263472" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_tutorial.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/spinner_item.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.16770833333333332" />
       </map>

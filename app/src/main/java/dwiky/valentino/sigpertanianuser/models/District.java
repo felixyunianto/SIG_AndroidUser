@@ -5,15 +5,26 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+
 public class District implements Parcelable {
     protected District(Parcel in) {
         id = in.readString();
         kecamatan = in.readString();
-        koordinat = in.readString();
     }
 
     @SerializedName("id") private String id;
     @SerializedName("kecamatan") private String kecamatan;
+
+    public ArrayList<Coordinate> getKoordinat() {
+        return koordinat;
+    }
+
+    public void setKoordinat(ArrayList<Coordinate> koordinat) {
+        this.koordinat = koordinat;
+    }
+
+    @SerializedName("koordinat") private ArrayList<Coordinate> koordinat;
 
     public String getId() {
         return id;
@@ -30,16 +41,6 @@ public class District implements Parcelable {
     public void setKecamatan(String kecamatan) {
         this.kecamatan = kecamatan;
     }
-
-    public String getKoordinat() {
-        return koordinat;
-    }
-
-    public void setKoordinat(String koordinat) {
-        this.koordinat = koordinat;
-    }
-
-    @SerializedName("koordinat") private String koordinat;
 
     public static final Creator<District> CREATOR = new Creator<District>() {
         @Override
@@ -62,7 +63,6 @@ public class District implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(this.getId());
         parcel.writeString(this.getKecamatan());
-        parcel.writeString(this.getKoordinat());
     }
 
     @Override
