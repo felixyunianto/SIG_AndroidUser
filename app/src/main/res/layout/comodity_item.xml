@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_comodity_item"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Komoditas :"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/chartNamaKomoditas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Padi"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah :"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/chartJumlah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Awal :"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/chartTglAwal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022-05-20"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Akhir :"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/chartTglAkhir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022-06-20"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kecamatan :"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/chartKomoditasKecamatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wanasari"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desa :"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/chartKomoditasDesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Klampok"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -2,4 +2,30 @@
     <string name="app_name">SIGPertanianUser</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="comodity">
+        <item>Padi</item>
+        <item>Kedelai</item>
+        <item>Bawang Merah</item>
+        <item>Bawang Putih</item>
+        <item>Cabai Merah</item>
+        <item>Cabai Hijau</item>
+        <item>Cabai Rawit</item>
+        <item>Tomat</item>
+        <item>Terong</item>
+        <item>Kentang</item>
+        <item>Kacang Panjang</item>
+        <item>Kacang Tanah</item>
+        <item>Pare</item>
+        <item>Mentimun</item>
+        <item>Jahe</item>
+    </string-array>
+
+    <string-array name="statistic">
+        <item>Provitas</item>
+        <item>Luas Panen</item>
+        <item>Luas Tambah Tanam</item>
+        <item>Produksi</item>
+    </string-array>
+
 </resources>

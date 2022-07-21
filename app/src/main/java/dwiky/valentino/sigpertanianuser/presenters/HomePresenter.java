@@ -1,10 +1,14 @@
 package dwiky.valentino.sigpertanianuser.presenters;
 
+import org.json.JSONException;
+
 import dwiky.valentino.sigpertanianuser.contracts.HomeContract;
 import dwiky.valentino.sigpertanianuser.models.Agriculture;
 import dwiky.valentino.sigpertanianuser.models.District;
+import dwiky.valentino.sigpertanianuser.models.SearchingChart;
 import dwiky.valentino.sigpertanianuser.models.SubDistrict;
 import dwiky.valentino.sigpertanianuser.responses.WrappedListResponse;
+import dwiky.valentino.sigpertanianuser.responses.WrappedResponse;
 import dwiky.valentino.sigpertanianuser.utilities.APIClient;
 import dwiky.valentino.sigpertanianuser.webservices.APIServices;
 import retrofit2.Call;
@@ -30,6 +34,7 @@ public class HomePresenter implements HomeContract.HomePresenter {
                             WrappedListResponse body = response.body();
                             if(body != null && !body.isError()){
                                 view.attachToMap(body.getData());
+                                System.out.println("BODY " + body.getData());
                                 view.toast(body.getMessage());
                             }
                         }
@@ -78,8 +83,12 @@ public class HomePresenter implements HomeContract.HomePresenter {
                     public void onResponse(Call<WrappedListResponse<District>> call, Response<WrappedListResponse<District>> response) {
                         if (response.isSuccessful()){
                             WrappedListResponse body = response.body();
-                            if(body != null){
-                                view.attachPolygon(body.getData());
+                            if(body != null) {
+                                try {
+                                    view.attachPolygon(body.getData());
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
                     }
@@ -93,9 +102,9 @@ public class HomePresenter implements HomeContract.HomePresenter {
     }
 
     @Override
-    public void fetchSubDistrict() {
+    public void fetchSubDistrict(String id_kecamatan) {
         view.loading(true);
-        apiServices.fetchSubDistrict()
+        apiServices.fetchSubDistrict(id_kecamatan)
                 .enqueue(new Callback<WrappedListResponse<SubDistrict>>() {
                     @Override
                     public void onResponse(Call<WrappedListResponse<SubDistrict>> call, Response<WrappedListResponse<SubDistrict>> response) {
@@ -112,6 +121,33 @@ public class HomePresenter implements HomeContract.HomePresenter {
 
                     @Override
                     public void onFailure(Call<WrappedListResponse<SubDistrict>> call, Throwable t) {
+                        System.out.println("Terjadi kesalahan " + t.getMessage());
+                        view.loading(false);
+                    }
+                });
+    }
+
+    @Override
+    public void fetchChartComodity(String kecamatan, String jenis_komoditas, String jenis_statistik, String awal, String akhir) {
+        view.loading(true);
+        apiServices.fetchChartComodity(kecamatan, jenis_komoditas, jenis_statistik, awal, akhir)
+                .enqueue(new Callback<WrappedResponse<SearchingChart>>() {
+                    @Override
+                    public void onResponse(Call<WrappedResponse<SearchingChart>> call, Response<WrappedResponse<SearchingChart>> response) {
+                        if(response.isSuccessful()){
+                            WrappedResponse body = response.body();
+                            SearchingChart data = (SearchingChart) body.getData();
+                            if(body != null){
+                                view.attachToChart(data.getChart(), data.getComodities());
+                            }else{
+                                view.toast("Error");
+                            }
+                        }
+                        view.loading(false);
+                    }
+
+                    @Override
+                    public void onFailure(Call<WrappedResponse<SearchingChart>> call, Throwable t) {
                         System.out.println("Terjadi kesalahan " + t.getMessage());
                         view.loading(false);
                     }

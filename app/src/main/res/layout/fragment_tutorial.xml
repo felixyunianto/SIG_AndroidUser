@@ -5,10 +5,64 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.TutorialFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Tutorial" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Petunjuk Cara Penggunaan Website SIG Lahan Pertanian dan Komoditas Hasil Panen di Kabupaten Brebes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(1) Silahkan akses menu Dashboard terlebih dahulu."
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(2) Untuk mencari data cukup ke menu Form Search. Dan pilih Jenis Data atau Lahan yang ingin anda cari."
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(3) Untuk informasi lebih lanjut silahkan hubungi kami di menu Contact US atau Hubungi Kami."
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone : (0283) 671742"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Website : dpkp.brebeskab.go.id"
+            android:textSize="14sp"
+            />
+
+
+
+    </LinearLayout>
 
 </FrameLayout>

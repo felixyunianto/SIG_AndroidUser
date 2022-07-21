@@ -9,7 +9,7 @@
         android:id="@+id/navigation_home"
         android:title="Home"
         android:icon="@drawable/ic_baseline_home_24"/>
-
+s
     <item
         android:id="@+id/navigation_tutorial"
         android:title="Tutorial"

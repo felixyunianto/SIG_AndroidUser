@@ -5,10 +5,63 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.ContactUsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Contact Us" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact US"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dinas Pertanian dan Ketahanan Pangan Kabupaten Brebes"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jl. Gajah Mada No.3 Kota Baru, Brebes"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email : dpkp@brebeskab.go.id"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone : (0283) 671742"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Website : dpkp.brebeskab.go.id"
+            android:textSize="14sp"
+            />
+
+
+
+    </LinearLayout>
 </FrameLayout>
